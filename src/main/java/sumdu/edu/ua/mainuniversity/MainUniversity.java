@@ -6,6 +6,7 @@ public class MainUniversity {
         University  univ=new University("Sumy State University","2, Rimsky-Korsakov Str., 40007 Sumy, Ukraine");
         System.out.println(univ.toSting());
         
+        
         Department dep1=new Department("ElIt Department");
         System.out.println(dep1.toSting());
         
@@ -24,7 +25,6 @@ public class MainUniversity {
         }
         
         
-        
         Department dep2=new Department("Ekonom Department");
         System.out.println(dep2.toSting());
         
@@ -41,7 +41,6 @@ public class MainUniversity {
         for(Student st:dep2.getStudents()){
             System.out.println(st.toSting());
         }
-        
         
     }
 }
