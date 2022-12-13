@@ -20,6 +20,9 @@ private String surname;
         return id;
     }
 
+    public Student() {
+    }
+
     public void setId(int id) {
         this.id = id;
     }
