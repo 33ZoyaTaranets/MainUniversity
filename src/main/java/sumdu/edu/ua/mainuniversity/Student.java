@@ -3,7 +3,7 @@ package sumdu.edu.ua.mainuniversity;
 public class Student {
 private int id;
 private static int nextId=1;
-private String name;
+private String name=null;
 private String surname;
 
     public Student(String name, String surname) {
