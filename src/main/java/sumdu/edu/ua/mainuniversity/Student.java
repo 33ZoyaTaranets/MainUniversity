@@ -2,12 +2,11 @@ package sumdu.edu.ua.mainuniversity;
 
 public class Student {
 private int id;
-private static int nextId=1;
-private String name=null;
+private String name;
 private String surname;
 
-    public Student(String name, String surname) {
-        this.id = nextId++;
+    public Student(int id, String name, String surname) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
     }
@@ -27,15 +26,7 @@ private String surname;
         this.id = id;
     }
 
-    public static int getNextId() {
-        return nextId;
-    }
-
-    public static void setNextId(int nextId) {
-        Student.nextId = nextId;
-    }
-
-    public String getName() {
+       public String getName() {
         return name;
     }
 
