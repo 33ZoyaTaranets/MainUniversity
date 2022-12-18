@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stud_register" class="sumdu.edu.ua.mainuniversity.StudRegister" scope="prototype">
+        <constructor-arg value="student list"></constructor-arg>
+        <property name="universityName" value="Sumy State University"></property>
+    </bean>
+    
+    <bean id="eduministry" class="sumdu.edu.ua.mainuniversity.EduMinistry">
+        <constructor-arg value="Edu Ministry"/>
+    </bean>
+    
+</beans>
+
