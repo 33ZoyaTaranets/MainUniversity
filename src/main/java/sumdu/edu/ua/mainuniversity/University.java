@@ -7,16 +7,25 @@ public class University {
    
     private String name;
     private String address;
-    private Set<Department> departments=null;
+    private Set<Department> departments;
+    private StudRegister studRegister;
 
-    public University(String name, String address) {
+    public University(String name, String address, Set<Department> departments) {
         this.name = name;
         this.address = address;
-        this.departments=new HashSet<Department>();
-    }    
-    
-    public String toSting(){
-        return this.name+" "+this.address;
+        this.departments = departments;
+        
+        studRegister = new StudRegister("student list");
+        studRegister.setUniversityName(name);
+        Set<Student> allStudents = new HashSet<>();
+        departments.forEach((department) -> {
+            allStudents.addAll(department.getStudents());
+        });        
+        studRegister.setStudents(allStudents);
+    }
+
+    public StudRegister getStudRegister() {
+        return studRegister;
     }
 
     public String getName() {
@@ -34,6 +43,14 @@ public class University {
     public void setAddress(String address) {
         this.address = address;
     }
-     
+
+    public Set<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Set<Department> departments) {
+        this.departments = departments;
+    }
     
+         
 }
