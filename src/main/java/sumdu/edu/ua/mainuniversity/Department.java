@@ -5,19 +5,24 @@ import java.util.Set;
 
 public class Department {
     private int id;
-    private static int nextId=1;
     private String name;
+    private Set<Student> students;
+
+    public Department(int id, Set<Student> students) {
+        this.id = id;
+        this.students = students;
+    }     
+     
+    public String toSting(){
+        return this.id+" "+this.students;
+    }
     
-    private Set<Student> students=null;
-    
-    public Department(String name) {
-        this.id = nextId++;
-        this.name = name;
-        this.students=new HashSet<Student>();
+    public int getId() {
+        return id;
     }
 
-    public String toSting(){
-        return this.id+" "+this.name;
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getName() {
